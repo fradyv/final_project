@@ -43,6 +43,9 @@ header {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  background: var(--white);
+  border-radius: 50px;
+  padding: 10px 16px;
 }
 
 .logo-icon {
@@ -485,3 +488,220 @@ nav a:hover {
     animation: none;
   }
 }
+/* ── JEJAK KEBAIKAN ── */
+#jejak-kebaikan {
+  padding: 80px 48px;
+  text-align: center;
+}
+ 
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+ 
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+ 
+.stat-number {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: clamp(6rem, 6vw, 5rem);
+  color: var(--text-dark);
+  line-height: 1;
+}
+ 
+.stat-label {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+ 
+.stat-desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  max-width: 180px;
+}
+/* ── PARA HERO ── */
+#para-hero {
+  padding: 80px 48px;
+}
+
+.hero-slider-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.hero-slider {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(.22,.68,0,1.2);
+}
+
+.hero-card {
+  min-width: 320px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(33, 163, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.hero-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--blue-main);
+}
+
+.hero-name {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.hero-role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-body);
+  text-align: center;
+}
+
+/* Grid produk hero — ini yang difokusin */
+.hero-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.hero-products img {
+  width: 100%;
+  aspect-ratio: 1;        
+  height: 150px;          
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  background: var(--blue-main);
+  color: var(--white);
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+/* ── TESTIMONI SAVIOR ── */
+#testimoni {
+  padding: 80px 48px;
+}
+
+.testi-slider-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.testi-slider {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(.22,.68,0,1.2);
+}
+
+.testi-card {
+  min-width: 340px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(33, 163, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.testi-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testi-top img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--blue-main);
+}
+
+.testi-top h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.testi-top span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  color: var(--blue-main);
+}
+
+.testi-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── SLIDER BUTTONS (shared) ── */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--blue-main);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(33, 163, 255, 0.35);
+}
+
+.slider-btn:hover {
+  background: #1a8fe0;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.slider-btn.prev { left: 0; }
+.slider-btn.next { right: 0; }
