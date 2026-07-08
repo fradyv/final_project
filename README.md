@@ -7,59 +7,66 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About KindlyJAR
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+KindlyJAR merupakan web charity dengan sistem menyumbang melalui karya atau skill, sehingga dapat memfasilitasi pengguna dengan rasa soial dan filantropi yang tinggi untuk tetap memberi bermodalkan keahlian mereka tanpa perlu mengeluarkan uang.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Nama KindlyJAR merupakan gabungan dari kata “Kindly” (kebaikan atau dengan baik hati) dan “JAR” (toples atau wadah). Nama ini memiliki filosofi dan arti sebagai sebuah “wadah pengumpul kebaikan”. Layaknya sebuah toples yang diisi koin demi koin untuk ditabung. KindlyJAR menjadi wadah digital tempat terkumpulnya hasil kerja keras dari para HERO (penjual) yang didedikasikan sepenuhnya untuk membantu sesama.
 
-## Learning Laravel
+## Struktur Web
+Struktur halaman web dirancang untuk mendukung tiga pengguna utama: User biasa (dapat berlaku sebagai penjual (hero) dan pembeli (savior)), penggalang dana, dan admin.
+•	Landing Page
+o	Home: Penjelasan singkat tentang platform dan highlight program donasi, serta produk digital yang dijual hero.
+o	Katalog produk: Daftar semua produk yang dijual oleh hero.
+o	Daftar program donasi: Menampilkan kampanye donasi yang terdaftar.
+•	Dashboard User Biasa dan Penggalang
+o	Beranda: Berisi informasi total donasi, karya terjual, inisiasi program (buat program donasi), dan pencairan dana (hanya berlaku jika pengguna daftar menjadi penggalang). Lalu terdapat riwayat transaksi dan highlight program donasi yang populer atau paling banyak dibantu.
+o	Program donasi: Berisi informasi lengkap mengenai banyak program yang terdaftar. Terdapat pemilihan juga sesuai kategori.
+o	KindlyShop: Berisi katalog produk yang dijual oleh banyak hero (penjual), dapat melihat detail per produk juga.
+o	Riwayat Pembelian: Berisi informasi riwayat pembelian produk oleh savior (pembeli).
+o	Inisiasi Donasi: Berisi verifikasi KYC sebelum masuk ke halaman manajemen program donasi, dapat membuat, update, dan delete program donasi yang dibuat oleh penggalang yang sudah terverifikasi.
+o	Keranjang: Berisi kumpulan pembelian yang belum di checkout oleh savior (pembeli).
+•	Dashboard Admin
+o	Kelola Pengguna: Memantau aktivitas penjual dan pembeli.
+o	Kelola Transaksi: Memantau pembayaran dari pembeli.
+o	Kelola Pendaftar Penggalang: Memverifikasi pengguna yang ingin mendaftar sebagai penggalang.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Proses Bisnis
+Alur kerja platform ini memisahkan secara ketat antara hak kepemilikan pendapatan penyalurannya, memastikan komitmen amal platform terjaga.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+A.	Alur Seller (Hero)
+1.	Pendaftaran Produk: Penjual menawarkan skill sebagai sebuah produk di platform dan menetapkan harga jual di awal.
+2.	Penjualan: Saat produk dibeli, dana tidak bisa ditarik ke rekening pribadi penjual.
+3.	Pemilihan Target: Saat membuat atau menambahkan produk yang dijual, hero dapat memberikan relasi atau katikan satu produknya dengan satu program donasi, sehingga memiliki relasi one to one. Hasil penjualan satu produk itu akan langsung disalurkan ke program donasi yang ia kaitkan dengan satu produk itu.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+B.	Alur Buyer (Savior)
+1.	Eksplorasi Katalog: Pembeli melihat-lihat daftar produk yang ditawarkan oleh penjual di halaman katalog.
+2.	Pembelian dan Pembayaran: Pembeli memilih produk yang diinginkan dimana produk ini memiliki relasi one to one dengan satu campaign (program donasi) dan beralih ke halaman keranjang untuk melihat daftar belanja serta program donasi apa yang memiliki relasi dengan produk yang savior pilih. Dalam halaman tersebut juga, savior dapat menambahkan produk lain, yang di mana hanya akan menampilkan produk lain yang memiliki relasi dengan campaign (program donasi) yang sama. Pembeli (savior) dapat  melakukan pembayaran sesuai harga tetap yang telah ditentukan penjual atau dapat melebihkan pembayarannya dengan catatan minimal pembayaran adalah harga produk atau harga total produk yang ia beli.
+3.	Penerimaan Produk: Pembeli menerima produk dari penjual. Di saat yang sama, pembeli juga mendapatkan transparansi bahwa uang yang mereka bayarkan telah disalurkan ke target donasi.
 
-## Laravel Sponsors
+C.	Alur Penggalang
+1.	Pembuatan Program Donasi: Penggalang dapat membuat program donasi.
+2.	List Relasi Produk: Penggalang dapat melihat list produk-produk yang berkaitan dengan satu-satu campaign (program donasi) yang ia punya. Sehingga satu campaign (program donasi) memiliki relasi hasMany produk.
+3.	Pengambilan Uang Donasi: Penggalang dapat mengambil uang yang telah disalurkan ke program donasi yang dibuat melalui e-wallet penggalang.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+D.	Alur Admin
+1.	Pemantauan Transaksi: Admin memantau transaksi pembelian yang masuk.
+2.	Pemantauan User: Memantau aktivitas user dan penggalang.
+3.	Pemantauan Donasi: Memantau penyaluran donasi dari pembelian savior (pembeli).
 
-### Premium Partners
+## Flow Users
+Tedapat 3 user, yaitu normal user, fundraiser (penggalang dana), dan admin.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1.	Alur normal user
+Setelah user (savior) login, dapat melihat produk yang berada dalam katalog produk. Lalu memilih produk dan beralih ke halaman menu untuk checkout. User (savior) dapat melihat informasi produk serta campaign yang berkaitan dengan produk tersebut, user (savior) juga dapat menambahkan produk lain yang memiliki relasi dengan campaign yang sama sebelum melakukan pembayaran. Uang tersebut otomatis akan tersalurkan ke program donasi tersebut.
+Selain itu user (hero) juga dapat membuka toko, setelahnya user (hero) dapat menambahkan produk yang ingin dijual. Setelah mengisi informasi detail terkait produk, user (hero) wajib mengaitkan atau memberikan relasi kepada satu campaign (program donasi) di tiap satu produk yang user (hero) buat.
 
-## Contributing
+2.	Alur penggalang
+User akan mendaftar sebagai penggalang  (fundraiser), setelah mengisi KYC, pengguna harus menunggu verifikasi oleh admin. Ketika sudah di verifikasi, user sah menjadi dan mendapatkan role sebagai penggalang dana. Selanjutnya penggalang dapat membuka campaign atau program donasi sendiri dengan mengisi informasi yang dibutuhkan tentunya. Penggalang juga dapat melihat list produk hero yang berkaitan dengan program donasi yang ia buat.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3.	Alur admin
+Admin adalah pengguna yang memantau aktivitas pengguna dari sisi user dan penggalang, serta memverifikasi data penting seperti saat terdapat user ingin daftar sebagai penggalang dan butuh verifikasi admin terlebih dahulu sebelum lanjut. Selain itu admin juga memantau transaksi dan donasi yang terjadi dalam platform.
 
 ## License
 
