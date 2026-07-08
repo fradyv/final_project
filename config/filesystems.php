@@ -47,6 +47,20 @@ return [
             'report' => false,
         ],
 
+<<<<<<< HEAD
+=======
+        // Disk untuk file yang TIDAK boleh diakses publik secara langsung.
+        // Digunakan untuk: file digital produk (PDF, ZIP, dll) dan
+        // dokumen verifikasi fundraiser (KTP, surat pernyataan, dll).
+        // File hanya bisa diakses melalui controller yang memvalidasi hak akses pembeli.
+        'private' => [
+            'driver' => 'local',
+            'root' => storage_path('app/private'),
+            'throw' => false,
+            'report' => false,
+        ],
+
+>>>>>>> master
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

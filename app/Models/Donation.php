@@ -2,23 +2,42 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 use App\Enums\DonationStatus;
+=======
+use App\Enums\TransactionStatus;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+>>>>>>> master
 use Illuminate\Database\Eloquent\Model;
 
 class Donation extends Model
 {
+<<<<<<< HEAD
+=======
+    use HasFactory;
+    
+>>>>>>> master
     protected $fillable = [
         'donor_id',
         'campaign_id',
         'amount',
+<<<<<<< HEAD
         'status',
+=======
+        'status'
+>>>>>>> master
     ];
 
     protected function casts(): array
     {
         return [
             'amount' => 'decimal:2',
+<<<<<<< HEAD
             'status' => DonationStatus::class,
+=======
+            'status' => TransactionStatus::class
+
+>>>>>>> master
         ];
     }
 
