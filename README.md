@@ -16,21 +16,21 @@ Nama KindlyJAR merupakan gabungan dari kata “Kindly” (kebaikan atau dengan b
 
 ## Struktur Web
 Struktur halaman web dirancang untuk mendukung tiga pengguna utama: User biasa (dapat berlaku sebagai penjual (hero) dan pembeli (savior)), penggalang dana, dan admin.
-•	Landing Page
-o	Home: Penjelasan singkat tentang platform dan highlight program donasi, serta produk digital yang dijual hero.
-o	Katalog produk: Daftar semua produk yang dijual oleh hero.
-o	Daftar program donasi: Menampilkan kampanye donasi yang terdaftar.
-•	Dashboard User Biasa dan Penggalang
-o	Beranda: Berisi informasi total donasi, karya terjual, inisiasi program (buat program donasi), dan pencairan dana (hanya berlaku jika pengguna daftar menjadi penggalang). Lalu terdapat riwayat transaksi dan highlight program donasi yang populer atau paling banyak dibantu.
-o	Program donasi: Berisi informasi lengkap mengenai banyak program yang terdaftar. Terdapat pemilihan juga sesuai kategori.
-o	KindlyShop: Berisi katalog produk yang dijual oleh banyak hero (penjual), dapat melihat detail per produk juga.
-o	Riwayat Pembelian: Berisi informasi riwayat pembelian produk oleh savior (pembeli).
-o	Inisiasi Donasi: Berisi verifikasi KYC sebelum masuk ke halaman manajemen program donasi, dapat membuat, update, dan delete program donasi yang dibuat oleh penggalang yang sudah terverifikasi.
-o	Keranjang: Berisi kumpulan pembelian yang belum di checkout oleh savior (pembeli).
-•	Dashboard Admin
-o	Kelola Pengguna: Memantau aktivitas penjual dan pembeli.
-o	Kelola Transaksi: Memantau pembayaran dari pembeli.
-o	Kelola Pendaftar Penggalang: Memverifikasi pengguna yang ingin mendaftar sebagai penggalang.
+1. Landing Page
+- Home: Penjelasan singkat tentang platform dan highlight program donasi, serta produk digital yang dijual hero.
+- Katalog produk: Daftar semua produk yang dijual oleh hero.
+- Daftar program donasi: Menampilkan kampanye donasi yang terdaftar.
+2. Dashboard User Biasa dan Penggalang
+- Beranda: Berisi informasi total donasi, karya terjual, inisiasi program (buat program donasi), dan pencairan dana (hanya berlaku jika pengguna daftar menjadi penggalang). Lalu terdapat riwayat transaksi dan highlight program donasi yang populer atau paling banyak dibantu.
+- Program donasi: Berisi informasi lengkap mengenai banyak program yang terdaftar. Terdapat pemilihan juga sesuai kategori.
+- KindlyShop: Berisi katalog produk yang dijual oleh banyak hero (penjual), dapat melihat detail per produk juga.
+- Riwayat Pembelian: Berisi informasi riwayat pembelian produk oleh savior (pembeli).
+- Inisiasi Donasi: Berisi verifikasi KYC sebelum masuk ke halaman manajemen program donasi, dapat membuat, update, dan delete program donasi yang dibuat oleh penggalang yang sudah terverifikasi.
+- Keranjang: Berisi kumpulan pembelian yang belum di checkout oleh savior (pembeli).
+3. Dashboard Admin
+- Kelola Pengguna: Memantau aktivitas penjual dan pembeli.
+- Kelola Transaksi: Memantau pembayaran dari pembeli.
+- Kelola Pendaftar Penggalang: Memverifikasi pengguna yang ingin mendaftar sebagai penggalang.
 
 ## Proses Bisnis
 Alur kerja platform ini memisahkan secara ketat antara hak kepemilikan pendapatan penyalurannya, memastikan komitmen amal platform terjaga.
